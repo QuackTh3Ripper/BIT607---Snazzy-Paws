@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snazzy Paws Grooming - Gallery</title>
+  <meta name="description" content="Professional dog grooming in Hamilton - Snazzy Paws">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
+
+  <style>
+    /* === Responsive Image Grid === */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 15px;
+      padding: 20px 0;
+    }
+
+    /* Image styling with hover effect */
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      cursor: pointer;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    /* === Lightbox Popup === */
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.8);
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .lightbox.active {
+      display: flex;
+      opacity: 1;
+    }
+
+    /* Enlarged image inside the lightbox */
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+      animation: fadeInImage 0.4s ease;
+    }
+
+    /* Fade-in animation for images */
+    @keyframes fadeInImage {
+      from { transform: scale(0.95); opacity: 0; }
+      to { transform: scale(1); opacity: 1; }
+    }
+
+    /* Close button (X) overlay */
+    .lightbox:after {
+      content: "×";
+      position: absolute;
+      top: 20px; right: 30px;
+      color: white;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+  </style>
+
+    <style>
+      .image-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 16px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .image-list li {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .image-list img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        object-fit: cover;
+        display: block;
+      }
+    </style>
+    
+
+<style>
+  .image-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  .image-list li {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .image-list img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+  }
+  .image-list img:hover {
+    transform: scale(1.05);
+  }
+</style>
+
+
+<style>
+  .gallery-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .image-list {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+  }
+  .image-list li {
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+    background: #1e1e1e;
+  }
+  .image-list img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  .image-list img:hover {
+    transform: scale(1.05);
+  }
+  @media (max-width: 768px) {
+    .image-list img {
+      height: 200px;
+    }
+  }
+  @media (max-width: 480px) {
+    .image-list img {
+      height: 180px;
+    }
+  }
+</style>
+
+
+<style>
+.gallery-section{grid-column:1 / -1;}
+</style>
+</head>
+<body>
+  <!-- === Header and Navigation === -->
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"><img src="cropped-snazzy5-1.webp" alt="Snazzy Paws Logo" style="height:60px;"></div>
+        <div>
+          <h1 style="margin:0;color:var(--teal-dark);">Snazzy Paws Grooming</h1>
+          <div style="font-size:.9rem;color:#6b6b6b;">Snazzy Paws — Professional Dog Grooming</div>
+        </div>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- === Main Gallery Section === -->
+  <main class="container">
+    <section aria-labelledby="gallery-heading">
+      <h2 id="gallery-heading">Gallery</h2>
+
+      <!-- Responsive image grid -->
+      <div class="gallery" role="list">
+      
+
+<section class="gallery-section">
+  <ul class="image-list">
+    <li><img src="img1.webp" alt="Grooming example 1"></li>
+    <li><img src="img2.jpeg" alt="Grooming example 2"></li>
+    <li><img src="img3.jpeg" alt="Grooming example 3"></li>
+    <li><img src="img4.jpeg" alt="Grooming example 4"></li>
+    <li><img src="img5.jpg" alt="Grooming example 5"></li>
+    <li><img src="img6.jpg" alt="Grooming example 6"></li>
+    <li><img src="img7.png" alt="Grooming example 7"></li>
+    <li><img src="img8.jpg" alt="Grooming example 8"></li>
+    <li><img src="img9.jpeg" alt="Grooming example 9"></li>
+    <li><img src="img10.jpg" alt="Grooming example 10"></li>
+    <li><img src="img11.jpg" alt="Grooming example 11"></li>
+    <li><img src="img12.jpeg" alt="Grooming example 12"></li>
+  </ul>
+</section>
+
+
+</div>
+
+      <p>Click any image to view full size.</p>
+    </section>
+  </main>
+
+  <!-- Fixed booking button -->
+  <button class="book-fixed" onclick="location.href='booking.html'">Book Now</button>
+
+  <!-- === Footer === -->
+  <footer>
+    <div class="container footer-inner">
+      <div>Snazzy Paws Grooming — Open Mon–Sat 9am–5pm</div>
+      <div>© 2025 Snazzy Paws</div>
+    </div>
+  </footer>
+
+  <!-- Lightbox overlay (hidden by default) -->
+  <div class="lightbox" id="lightbox"></div>
+
+  <script>
+    // Highlight links when focused (for accessibility)
+    document.querySelectorAll('a').forEach(a => 
+      a.addEventListener('focus', () => a.style.outline='3px solid #ffeaa7')
+    );
+
+    // === Lightbox functionality ===
+    const lightbox = document.getElementById('lightbox');
+    const images = document.querySelectorAll('.gallery img');
+
+    // Open lightbox with clicked image
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.classList.add('active');
+        const imgClone = document.createElement('img');
+        imgClone.src = img.src;
+        lightbox.innerHTML = '';
+        lightbox.appendChild(imgClone);
+      });
+    });
+
+    // Close lightbox when clicked anywhere
+    lightbox.addEventListener('click', () => {
+      lightbox.classList.remove('active');
+    });
+  </script>
+</body>
+</html>

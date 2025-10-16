@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snazzy Paws Grooming - Home</title>
+  <meta name="description" content="Professional dog grooming in Hamilton - Snazzy Paws">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="cropped-snazzy5-1.webp" alt="Snazzy Paws Logo" style="height:60px;">
+        </div>
+        <div>
+          <h1 style="margin:0;color:var(--teal-dark);">Snazzy Paws Grooming</h1>
+          <div style="font-size:.9rem;color:#6b6b6b;">Snazzy Paws — Professional Dog Grooming</div>
+        </div>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" aria-labelledby="home-heading">
+      <div class="card">
+        <h2 id="home-heading">Welcome to Snazzy Paws</h2>
+        <p>Friendly, professional grooming for your dog. We offer bathing, haircutting, de-shedding and specialist treatments.</p>
+        <p><strong>Open:</strong> Monday–Saturday, 9am–5pm</p>
+        <button class="cta" onclick="location.href='booking.html'">Book an Appointment</button>
+      </div>
+      <div class="card" aria-hidden="false">
+        <h3>Featured service</h3>
+        <p>Full Grooming Package — Bath, haircut, nails &amp; teeth brushing.</p>
+        <p><strong>From $60</strong></p>
+      </div>
+    </section>
+
+    <section aria-labelledby="why-heading">
+      <h2 id="why-heading">Why choose us?</h2>
+      <ul>
+        <li>Experienced, dog-loving staff</li>
+        <li>Accessible salon with calm handling for nervous pets</li>
+        <li>Easy online booking</li>
+      </ul>
+    </section>
+  </main>
+
+  <button class="book-fixed" onclick="location.href='booking.html'">Book Now</button>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>Snazzy Paws Grooming — Open Mon–Sat 9am–5pm</div>
+      <div>© 2025 Snazzy Paws</div>
+    </div>
+  </footer>
+
+  <script>
+  // Simple accessibility helpers
+  document.querySelectorAll('a').forEach(a => 
+    a.addEventListener('focus', () => a.style.outline = '3px solid #ffeaa7')
+  );
+
+  // Booking form popup handler (if present)
+  function handleBookingSubmit(e) {
+    e.preventDefault();
+    alert('Thank you! Your booking request has been received. We will contact you to confirm.');
+    return false;
+  }
+  </script>
+</body>
+</html>

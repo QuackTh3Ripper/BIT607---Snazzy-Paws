@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+
+<meta charset="utf-8">
+<meta content="width=device-width,initial-scale=1" name="viewport">
+<title>Snazzy Paws Grooming - Booking</title>
+<meta content="Professional dog grooming in Hamilton - Snazzy Paws" name="description">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&amp;family=Open+Sans:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<link href="style.min.css" rel="stylesheet">
+<style>
+    
+
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 15px;
+        padding: 20px;
+    }
+
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        transition: transform 0.3s ease;
+    }
+    .gallery img:hover {
+        transform: scale(1.05);
+    }
+
+
+</style>
+
+<style>
+  select#service {
+    max-height: 250px;
+    overflow-y: auto;
+  }
+</style>
+
+</head>
+<body>
+<header>
+
+
+<div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+<div class="brand">
+<div aria-hidden="true" class="logo">
+    <img src="cropped-snazzy5-1.webp" alt="Snazzy Paws Logo" style="height:60px;">
+</div>
+<div>
+<h1 style="margin:0;color:var(--teal-dark);">Snazzy Paws Grooming</h1>
+<div style="font-size:.9rem;color:#6b6b6b;">Snazzy Paws — Professional Dog Grooming</div>
+</div>
+</div>
+
+
+<nav aria-label="Main Navigation">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="booking.html">Booking</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</nav>
+</div>
+
+
+</header>
+<main class="container">
+<section aria-labelledby="booking-heading">
+<h2 id="booking-heading">Booking</h2>
+<div aria-labelledby="booking-heading" class="form-card">
+<form id="bookingForm" onsubmit="return handleBookingSubmit(event)">
+
+<label for="owner">Owner's full name</label>
+<input id="owner" name="owner" placeholder="e.g. Aroha Te Rangi" required type="text">
+
+<label for="email">Email address</label>
+<input id="email" name="email" placeholder="you@example.com" required type="email">
+
+<label for="dogName">Dog's name</label>
+<input id="dogName" name="dogName" placeholder="e.g. Moko" required type="text">
+
+<label for="breed">Breed</label>
+<input id="breed" name="breed" placeholder="e.g. Border Collie" type="text">
+
+<label for="age">Age (years)</label>
+<input id="age" max="30" min="0" name="age" placeholder="e.g. 3" type="number">
+
+<label for="service">Select service</label>
+
+<select id="service" name="service" required>
+  <option value="">-- Select a Service --</option>
+  <option>Bath and Brush ($25–$50)</option>
+  <option>Haircut ($45–$85)</option>
+  <option>Nail Trim ($10–$20)</option>
+  <option>Ear Cleaning ($10–$15)</option>
+  <option>Teeth Brushing ($10–$15)</option>
+  <option>De-shedding Treatment (+$20–$40)</option>
+  <option>Flea and Tick Treatment ($15–$30)</option>
+  <option>Spa Package ($75–$150)</option>
+  <option>Express Service (+$15–$25)</option>
+  <option>Medicated Bath (+$20–$40)</option>
+  <option>Special-breed Cuts (Quoted)</option>
+  <option>Puppy Package ($30–$60)</option>
+  <option>Senior Dog Package ($40–$80)</option>
+  <option>Full Grooming Package ($60–$120)</option>
+</select>
+
+
+<button class="cta" type="submit">Submit Booking Request</button>
+</form>
+</div>
+</section>
+</main>
+<button class="book-fixed" onclick="location.href='booking.html'">Book Now</button>
+<footer>
+<div class="container footer-inner">
+<div>Snazzy Paws Grooming — Open Mon–Sat 9am–5pm</div>
+<div>© 2025 Snazzy Paws</div>
+
+</div>
+</footer>
+<script>
+// Simple accessibility helpers
+document.querySelectorAll('a').forEach(a => 
+    a.addEventListener('focus', () => a.style.outline = '3px solid #ffeaa7')
+);
+
+// Booking form popup handler
+function handleBookingSubmit(e) { 
+    e.preventDefault(); 
+    alert('Thank you! Your booking request has been received. We will contact you to confirm.'); 
+    return false; 
+}
+</script>
+<div class="gallery"></div>
+</body>
+</html>

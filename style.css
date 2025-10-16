@@ -1,0 +1,91 @@
+/* style.css - Snazzy Paws Grooming (accessible, responsive) */
+:root{
+  --teal: #a7e3d8;
+  --teal-dark: #5fbfb0;
+  --gold: #d9b44a;
+  --white: #ffffff;
+  --muted: #4a4a4a;
+  --max-width: 1100px;
+  --radius: 12px;
+}
+*{box-sizing:border-box}
+html{font-family: "Helvetica Neue", Arial, sans-serif; font-size:16px; color: #000000; background: #ffffff;}
+.container{max-width:var(--max-width); margin:0 auto; padding:1rem;}
+header{background: #ffffff; padding:1rem 0; box-shadow:0 1px 4px rgba(0,0,0,0.06); position:sticky; top:0; z-index:10;}
+.brand{display:flex; align-items:center; gap:1rem;}
+.logo{width:64px; height:64px; border-radius:8px; overflow:hidden; border:3px solid var(--teal-dark);}
+nav ul{list-style:none; display:flex; gap:1rem; margin:0; padding:0; align-items:center;}
+nav a{color: #000000; text-decoration:none; padding:.5rem .75rem; border-radius:8px;}
+nav a:hover, nav a:focus{background: #ffffff; color:var(--white); outline: none;}
+.hero{display:grid; grid-template-columns:1fr; gap:1rem; align-items:center; padding:2rem 0;}
+.hero .card{background: #ffffff; padding:1.25rem; border-radius:var(--radius); box-shadow:0 4px 18px rgba(0,0,0,0.06);}
+.cta{background: #ffffff; color:var(--white); padding:.75rem 1rem; border:none; border-radius:10px; cursor:pointer; font-weight:700;}
+.services table{width:100%; border-collapse:collapse; margin-top:1rem;}
+.services th, .services td{padding:.75rem; border:1px solid #eee; text-align:left;}
+.gallery{display:grid; gap:.5rem; grid-template-columns:repeat(4,1fr);}
+.gallery img{width:100%; height:160px; object-fit:cover; border-radius:8px;}
+.form-card{background: #ffffff; padding:1rem; border-radius:8px; box-shadow:0 6px 18px rgba(0,0,0,0.05);}
+label{display:block; font-weight:600; margin-bottom:.25rem;}
+input[type="text"], input[type="email"], input[type="number"], textarea, select{width:100%; padding:.5rem; border-radius:6px; border:1px solid #ddd; margin-bottom:.75rem;}
+footer{background: #ffffff; color:var(--white); padding:1rem 0; margin-top:2rem;}
+.footer-inner{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem;}
+.book-fixed{position:fixed; right:1rem; bottom:1rem; background: #ffffff; color:#fff; padding:.75rem 1rem; border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,0.12); border:none; cursor:pointer;}
+
+/* Responsive */
+@media (max-width:900px){ .gallery{grid-template-columns:repeat(3,1fr);} nav ul{gap:.5rem;} .hero{grid-template-columns:1fr;} }
+@media (max-width:600px){ .gallery{grid-template-columns:repeat(2,1fr);} header .container{padding:0 .75rem;} nav ul{flex-wrap:wrap;} .logo{width:48px;height:48px;} .hero{padding:1rem 0;} .gallery img{height:120px;} .footer-inner{flex-direction:column; text-align:center;} }
+
+/* === Global color reset (white bg, black text, keep teal accents) === */
+body, html {
+  background: #ffffff;
+  color: black !important;
+}
+
+/* Force all containers to white */
+section, header, footer, main, article, div {
+  background-color: white !important;
+  color: black !important;
+}
+
+/* Preserve teal accents */
+a, .accent, .highlight, .teal {
+  color: var(--teal-dark) !important;
+}
+
+.btn, .cta, .button, .teal-bg {
+  background-color: var(--teal-dark) !important;
+  color: white !important;
+}
+
+/* Hover effect for links/buttons */
+a:hover, .btn:hover, .cta:hover {
+  background-color: var(--teal) !important;
+  color: white !important;
+}
+
+/* Keep footer text readable */
+footer {
+  background-color: var(--teal) !important;
+  color: white !important;
+}
+
+/* Table borders stay subtle */
+table, th, td {
+  border-color: #ddd !important;
+}
+
+/* Services table specific styling */
+table.services, table.services th, table.services td {
+  color: #ffffff !important;
+  border-color: #d3d3d3 !important;
+}
+
+
+/* Ensure services table text is white */
+.services-table, .services-table th, .services-table td { color: white !important; }
+
+
+/* Strong override for services table text color */
+table, table th, table td, .services-table th, .services-table td {
+  color: #ffffff !important;
+}

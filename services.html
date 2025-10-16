@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Snazzy Paws Grooming - Services</title>
+  <meta name="description" content="Professional dog grooming in Hamilton - Snazzy Paws">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+  <header>
+    <div class="container" style="display:flex;align-items:center;justify-content:space-between;">
+      <div class="brand">
+        <div class="logo" aria-hidden="true">
+          <img src="cropped-snazzy5-1.webp" alt="Snazzy Paws Logo" style="height:60px;">
+        </div>
+        <div>
+          <h1 style="margin:0;color:var(--teal-dark);">Snazzy Paws Grooming</h1>
+          <div style="font-size:.9rem;color:#6b6b6b;">Snazzy Paws — Professional Dog Grooming</div>
+        </div>
+      </div>
+      <nav aria-label="Main Navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  
+<main class="container">
+  <h1>Our Grooming Services</h1>
+  <section class="services-grid">
+    <div class="service-card">
+      <h2>Bath and Brush</h2>
+      <p>Includes shampoo, blow-dry, brush-out, and nail trim.</p>
+      <p class="price">Price: $25–$50</p>
+    </div>
+    <div class="service-card">
+      <h2>Haircut</h2>
+      <p>Bath, blow-dry, haircut (based on breed standard or owner's preference), and nail trim.</p>
+      <p class="price">Price: $45–$85</p>
+    </div>
+    <div class="service-card">
+      <h2>Nail Trim</h2>
+      <p>Trim nails and, in some cases, filing.</p>
+      <p class="price">Price: $10–$20</p>
+    </div>
+    <div class="service-card">
+      <h2>Ear Cleaning</h2>
+      <p>Gentle cleaning of ears to remove wax and debris.</p>
+      <p class="price">Price: $10–$15</p>
+    </div>
+    <div class="service-card">
+      <h2>Teeth Brushing</h2>
+      <p>Brushing with pet-safe toothpaste.</p>
+      <p class="price">Price: $10–$15</p>
+    </div>
+    <div class="service-card">
+      <h2>De-shedding Treatment</h2>
+      <p>Special shampoo and undercoat removal. Price applies in addition to bath or haircut.</p>
+      <p class="price">Price: $20–$40</p>
+    </div>
+    <div class="service-card">
+      <h2>Flea and Tick Treatment</h2>
+      <p>Shampoo and preventative treatment.</p>
+      <p class="price">Price: $15–$30</p>
+    </div>
+    <div class="service-card">
+      <h2>Spa Package</h2>
+      <p>Bath, haircut, teeth brushing, nail trim, and sometimes special scents or conditioners.</p>
+      <p class="price">Price: $75–$150</p>
+    </div>
+    <div class="service-card">
+      <h2>Express Service</h2>
+      <p>For dogs that need minimal grooming or a quick touch-up.</p>
+      <p class="price">Price: additional $15–$25</p>
+    </div>
+    <div class="service-card">
+      <h2>Medicated Bath</h2>
+      <p>For pets with skin conditions requiring special shampoo.</p>
+      <p class="price">Price: additional $20–$40</p>
+    </div>
+    <div class="service-card">
+      <h2>Special-Breed Cuts</h2>
+      <p>Breed-specific cuts or styling based on customer preference. Price varies after consultation.</p>
+    </div>
+    <div class="service-card">
+      <h2>Puppy Package</h2>
+      <p>Introductory grooming services tailored for puppies.</p>
+      <p class="price">Price: $30–$60</p>
+    </div>
+    <div class="service-card">
+      <h2>Senior Dog Package</h2>
+      <p>Grooming services tailored for older dogs, with special handling and care.</p>
+      <p class="price">Price: $40–$80</p>
+    </div>
+    <div class="service-card">
+      <h2>Full Grooming Package</h2>
+      <p>Comprehensive service including bath, haircut, teeth brushing, nail trim, and ear cleaning.</p>
+      <p class="price">Price: $60–$120</p>
+    </div>
+  </section>
+</main>
+
+<style>
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px 0;
+  }
+  .service-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    padding: 20px;
+    text-align: center;
+  }
+  .service-card h2 {
+    color: #333;
+    margin-bottom: 10px;
+  }
+  .service-card p {
+    margin: 5px 0;
+    color: #555;
+  }
+  .service-card .price {
+    font-weight: bold;
+    color: #2a7a4e;
+  }
+</style>
+
+
+  <button class="book-fixed" onclick="location.href='booking.html'">Book Now</button>
+
+  <footer>
+    <div class="container footer-inner">
+      <div>Snazzy Paws Grooming — Open Mon–Sat 9am–5pm</div>
+      <div>© 2025 Snazzy Paws</div>
+    </div>
+  </footer>
+
+<script>
+  // Simple accessibility helpers
+  document.querySelectorAll('a').forEach(a => 
+    a.addEventListener('focus', () => a.style.outline = '3px solid #ffeaa7')
+  );
+
+  // Booking form popup handler (if present)
+  function handleBookingSubmit(e) { 
+    e.preventDefault(); 
+    alert('Thank you! Your booking request has been received. We will contact you to confirm.'); 
+    return false; 
+  }
+</script>
+</body>
+</html>
